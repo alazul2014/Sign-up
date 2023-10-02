@@ -3,6 +3,9 @@ body{
     
     background-image: url('https://i.pinimg.com/originals/89/b4/19/89b4198d2d3fc5007510626163b7759f.jpg');
     background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
 
 }
 
@@ -20,9 +23,13 @@ header{
   
   }
 
-  #phone_number {
+  #phone_number{
+    margin-left: 25px;
+  }
+  #submit_button{
+    margin-top: 10px;
+  }
 
-    margin-left: 1%;
-    
-
-}
+  #confirm_password{
+    margin-left: 80px;
+  }
