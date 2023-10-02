@@ -1,0 +1,28 @@
+body{
+
+    
+    background-image: url('https://i.pinimg.com/originals/89/b4/19/89b4198d2d3fc5007510626163b7759f.jpg');
+    background-size: cover;
+
+}
+
+
+header{  
+
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 25%;
+    align-items: center;
+    display: flex;
+    height: 0vh;
+    display: flex;
+    color: #065968;    
+  
+  }
+
+  #phone_number {
+
+    margin-left: 1%;
+    
+
+}
