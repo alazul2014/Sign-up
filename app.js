@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path');
 const dotenv = require("dotenv").config();
-const db = require("./db");
+const db = require("./src/models/db");
 require("dotenv").config();
 
 const app = express();
@@ -11,16 +11,16 @@ app.use(express.static(path.join(__dirname, "public")));
 
 // Routes
 app.get("/", (req, res) => {
-    const filePath = path.join(__dirname, 'public', 'html', "index.html");
+    const filePath = path.join(__dirname, 'public', 'views', "index.html");
     res.sendFile(filePath);
 });
 
 app.get("/login", (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'html', "login.html"));
+    res.sendFile(path.join(__dirname, 'public', 'views', "login.html"));
 });
 
 app.get("/signup", (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'html', 'signup.html'));
+    res.sendFile(path.join(__dirname, 'public', 'views', 'signup.html'));
 });
 
 app.get("/usrs", (req, res) => {
