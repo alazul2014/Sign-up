@@ -10,26 +10,65 @@ body{
 }
 
 
-header{  
-
+#center{  
+    
+    
+    text-align: center ;
     flex-direction: column;
-    justify-content: center;
+    justify-content: center ;
     margin-top: 25%;
-    align-items: center;
+    align-items: center ;
     display: flex;
     height: 0vh;
-    display: flex;
     color: #065968;    
   
   }
+ .button{
+  margin-top: 25px;
+  border-radius: 0.5em;
+  width: 120px;
+  height: 30px;
+  border-width: 5px;
+  border-color: #065968;
+  box-shadow: 10px 10px 5px #0000008e;
+ }
 
-  #phone_number{
-    margin-left: 25px;
-  }
-  #submit_button{
-    margin-top: 10px;
-  }
+ .name{
+  border-radius: 0.40em;
+  width: 250px;
+  height: 25px;
+  border-width: 5px;
+  border-color: #065968;
+ }
 
-  #confirm_password{
-    margin-left: 80px;
-  }
+ .number{
+  border-radius: 0.40em;
+  width: 250px;
+  height: 25px;
+  border-width: 5px;
+  border-color: #065968;
+ }
+
+ .email{
+  border-radius: 0.40em;
+  width: 250px;
+  height: 25px;
+  border-width: 5px;
+  border-color: #065968;
+ }
+
+ .password{
+  border-radius: 0.40em;
+  width: 250px;
+  height: 25px;
+  border-width: 5px;
+  border-color:#065968;
+ }
+
+.confirm_password{
+  border-radius: 0.40em;
+  width: 250px;
+  height: 25px;
+  border-width: 5px;
+  border-color: #065968;
+}
