@@ -9,12 +9,6 @@ const app = express();
 // Static path
 app.use(express.static(path.join(__dirname, "public")));
 
-// Javascript file type
-app.use((req, res, next) => {
-    res.type('application/javascript');
-    next();
-});
-
 // Main route
 app.get("/", (req, res) => {
     const filePath = path.join(__dirname, 'public', 'views', "index.html");
@@ -32,6 +26,12 @@ app.use("/signup", signupRouter)
 // Users route
 const usersRouter = require("./src/routes/usersRouter")
 app.use("/users", usersRouter)
+
+// Javascript file type
+app.use((req, res, next) => {
+    res.type('application/javascript');
+    next();
+});
 
 // Listener
 app.listen(3000, () => {
