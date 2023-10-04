@@ -9,6 +9,7 @@
     <link rel="shortcut icon"
         href="https://s.tmimgcdn.com/scr/1200x750/304800/montana-logo-simbolo-montana-vector-signo-v2_304894-original.jpg" />
     <title>Sign Up</title>
+    <script type="text/javascript" src="../../src/models/user_creation.js"></script>
 </head>
 
 <body>
@@ -18,7 +19,7 @@
         <div id="name">
             <h1>Name</h1>
 
-            <input class="name" type="text" name="name" placeholder="Escribe aquí tu nombre" id="">
+            <input class="name" type="text" name="name" placeholder="Escribe aquí tu nombre" id="nameField">
 
 
         </div>
@@ -50,16 +51,13 @@
                 id="">
         </div>
 
-        <div id="submit_button">
+        <div>
 
-            <button onclick="createUser('test', 'test@test.com', 'test', 12345)" class="button"
-                type="submit">Registrarse</button>
+            <button id="signupButton" class="button" type="submit" onclick="createUser()">Registrarse</button>
 
         </div>
 
     </div>
-
-    <script src="../../src/models/user_creation.js"></script>
 
 </body>
 

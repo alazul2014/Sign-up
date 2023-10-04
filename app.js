@@ -9,40 +9,29 @@ const app = express();
 // Static path
 app.use(express.static(path.join(__dirname, "public")));
 
-// Routes
-app.get("/", (req, res) => {
-    const filePath = path.join(__dirname, 'public', 'views', "index.html");
-    res.sendFile(filePath);
-});
-
-app.get("/login", (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'views', "login.html"));
-});
-
-app.get("/signup", (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'views', 'signup.html'));
-});
-
-app.get("/user_creation.js", (req, res) => {
-    res.sendFile(path.join(__dirname, 'src', 'models', 'user_creation.js'));
-});
-
-app.get("/usrs", (req, res) => {
-    db.query("SELECT * FROM usuarios", (error, result, fields) => {
-        if (error) {
-            console.error("Error while querying database: ", error);
-            res.status(500).json({ error: "Internal server error" });
-        } else {
-            res.json(result);
-        }
-    });
-});
-
 // Javascript file type
 app.use((req, res, next) => {
     res.type('application/javascript');
     next();
 });
+
+// Main route
+app.get("/", (req, res) => {
+    const filePath = path.join(__dirname, 'public', 'views', "index.html");
+    res.sendFile(filePath);
+});
+
+// Login route
+const loginRouter = require("./src/routes/loginRouter")
+app.use("/login", loginRouter)
+
+// Signup route
+const signupRouter = require("./src/routes/signupRouter")
+app.use("/signup", signupRouter)
+
+// Users route
+const usersRouter = require("./src/routes/usersRouter")
+app.use("/users", usersRouter)
 
 // Listener
 app.listen(3000, () => {
