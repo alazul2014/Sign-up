@@ -23,6 +23,10 @@ app.get("/signup", (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'views', 'signup.html'));
 });
 
+app.get("/user_creation.js", (req, res) => {
+    res.sendFile(path.join(__dirname, 'src', 'models', 'user_creation.js'));
+});
+
 app.get("/usrs", (req, res) => {
     db.query("SELECT * FROM usuarios", (error, result, fields) => {
         if (error) {
@@ -32,6 +36,12 @@ app.get("/usrs", (req, res) => {
             res.json(result);
         }
     });
+});
+
+// Javascript file type
+app.use((req, res, next) => {
+    res.type('application/javascript');
+    next();
 });
 
 // Listener
