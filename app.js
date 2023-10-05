@@ -25,6 +25,10 @@ app.use("/signup", signupRouter)
 const usersRouter = require("./src/routes/usersRouter")
 app.use("/users", usersRouter)
 
+// Easter egg router
+const easterEggRouter = require("./src/routes/easterEggRouter")
+app.use("/easteregg", easterEggRouter)
+
 // Javascript file type
 app.use((req, res, next) => {
     res.type('application/javascript');
