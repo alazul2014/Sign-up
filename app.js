@@ -9,21 +9,19 @@ const app = express();
 // Static path
 app.use(express.static(path.join(__dirname, "public")));
 
-// Main route
-app.get("/", (req, res) => {
-    const filePath = path.join(__dirname, 'public', 'views', "index.html");
-    res.sendFile(filePath);
-});
+// Home router
+const homeRouter = require("./src/routes/homeRouter")
+app.use("/", homeRouter)
 
-// Login route
+// Login router
 const loginRouter = require("./src/routes/loginRouter")
 app.use("/login", loginRouter)
 
-// Signup route
+// Signup router
 const signupRouter = require("./src/routes/signupRouter")
 app.use("/signup", signupRouter)
 
-// Users route
+// Users router
 const usersRouter = require("./src/routes/usersRouter")
 app.use("/users", usersRouter)
 
@@ -33,7 +31,4 @@ app.use((req, res, next) => {
     next();
 });
 
-// Listener
-app.listen(3000, () => {
-    console.log("Server is running on port 3000");
-});
+module.exports = app;
