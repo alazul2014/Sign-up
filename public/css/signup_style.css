@@ -1,26 +1,25 @@
 body{
 
-    font-family: Arial, Helvetica, 'sans-serif';
-    background-image: url('https://i.pinimg.com/originals/89/b4/19/89b4198d2d3fc5007510626163b7759f.jpg');
-    background-size: cover;
-    background-position: center center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
+  font-family: Arial, Helvetica, 'sans-serif';
+  background-image: url('https://i.pinimg.com/originals/89/b4/19/89b4198d2d3fc5007510626163b7759f.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 
 }
 
 
 #center{  
     
-    
-    text-align: center ;
-    flex-direction: column;
-    justify-content: center ;
-    margin-top: 25%;
-    align-items: center ;
-    display: flex;
-    height: 0vh;
-    color: #065968;    
+  text-align: center ;
+  flex-direction: column;
+  justify-content: center ;
+  margin-top: 25%;
+  align-items: center ;
+  display: flex;
+  height: 0vh;
+  color: #065968;    
   
   }
  .button{
@@ -32,7 +31,6 @@ body{
   border-color: #065968;
   box-shadow: 10px 10px 5px #0000008e;
  }
-
  .name{
   border-radius: 0.40em;
   width: 250px;
@@ -40,7 +38,6 @@ body{
   border-width: 5px;
   border-color: #065968;
  }
-
  .number{
   border-radius: 0.40em;
   width: 250px;
@@ -48,7 +45,6 @@ body{
   border-width: 5px;
   border-color: #065968;
  }
-
  .email{
   border-radius: 0.40em;
   width: 250px;
@@ -56,7 +52,6 @@ body{
   border-width: 5px;
   border-color: #065968;
  }
-
  .password{
   border-radius: 0.40em;
   width: 250px;
@@ -64,7 +59,7 @@ body{
   border-width: 5px;
   border-color:#065968;
  }
-
+ 
 .confirm_password{
   border-radius: 0.40em;
   width: 250px;

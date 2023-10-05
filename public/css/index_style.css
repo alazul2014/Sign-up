@@ -11,8 +11,41 @@ body{
     background-size: cover;
 
     background-attachment: fixed;
+
+    margin-left: 1780px;
+
    
 }
+.li_1{
+    cursor: pointer;
+}
+
+.menu ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    
+}
+.menu a {
+    border-radius: 0.2em;
+    display: block;
+    padding: 2em;
+    background-color: #7941c2c5;
+    text-decoration: none;
+    color: #191C26;
+}
+.menu a:hover {
+    background-color: #8f63c9c5;
+}
+.menu ul li ul {
+    display: none;
+}
+.menu ul li a:hover + ul, .menu ul li ul:hover {
+    display: block;
+}
+
+/*
 #login{  
 
     position: absolute;
