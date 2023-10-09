@@ -6,7 +6,7 @@ body{
   background-position: center center;
   background-attachment: fixed;
   background-repeat: no-repeat;
-
+  display: flex;
 }
 .box{
   background-image: url('https://i.pinimg.com/originals/89/b4/19/89b4198d2d3fc5007510626163b7759f.jpg');
@@ -19,6 +19,7 @@ body{
   margin-left: 60px;
   border-radius: 0.5em;
   text-align: center;
+  
 }
 #button{
   margin-top:10px;

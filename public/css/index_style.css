@@ -39,7 +39,6 @@ body {
     display: none;
 }
 
-.menu ul li a:hover+ul,
-.menu ul li ul:hover {
+.menu ul li a:hover + ul, .menu ul li ul:hover {
     display: block;
 }
