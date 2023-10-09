@@ -10,6 +10,9 @@ body {
     margin-right: 0;
     /* Reset right margin */
 }
+.li_1{
+    cursor: pointer;
+}
 
 .menu ul {
     display: flex;
