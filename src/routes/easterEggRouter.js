@@ -16,4 +16,8 @@ router.get("/nino-bravo", (req, res) => {
     res.sendFile(path.join(__dirname, "../../public/views/ninoBravo.html"))
 })
 
+router.get("/otros", (req, res) => {
+    res.sendFile(path.join(__dirname, "../../public/views/otros.html"))
+})
+
 module.exports = router;
